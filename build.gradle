@@ -4,7 +4,7 @@ version '1.0'
 
 targetCompatibility = 8
 //switch to JavaVersion.VERSION_17 to use Java 17 features; this requires adding jabel (see dependencies block below)
-sourceCompatibility = 8
+sourceCompatibility = JavaVersion.VERSION_16
 
 sourceSets.main.java.srcDirs = ["src"]
 
@@ -15,7 +15,7 @@ repositories{
 
 ext{
     //the build number that this mod is made for
-    mindustryVersion = 'v131'
+    mindustryVersion = 'v135'
     jabelVersion = "0.7.0"
     sdkRoot = System.getenv("ANDROID_HOME") ?: System.getenv("ANDROID_SDK_ROOT")
 }
@@ -28,8 +28,8 @@ allprojects{
 }
 
 dependencies{
-    compileOnly "com.github.Anuken.Arc:arc-core:$mindustryVersion"
-    compileOnly "com.github.Anuken.Mindustry:core:$mindustryVersion"
+    compileOnly "com.github.Anuken.MindustryJitpack:core:0fa26b1b0f"
+    compileOnly "com.github.Anuken.Arc:arc-core:dfcb21ce56"
 
     //you may uncomment this dependency to properly use Java 17 features while still targeting Java 8.
     //note that this fails on some systems for as-of-yet unknown reasons - if this happens to you, revert the changes
