@@ -2,9 +2,11 @@ package latum.content;
 
 import mindustry.type.*;
 import mindustry.ai.types.*;
+import mindustry.annotations.Annotations.*;
+import mindustry.gen.*;
 
 public class LUnitTypes{
-    public static UnitType latum;
+    public static @EntityDef({Unitc.class, Crawlc.class}) UnitType latum;
     
     public static void load(){
         latum = new UnitType("latum"){{
