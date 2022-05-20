@@ -2,11 +2,10 @@ package latum.content;
 
 import mindustry.type.*;
 import mindustry.ai.types.*;
-import mindustry.annotations.*;
 import mindustry.gen.*;
 
 public class LUnitTypes{
-    public static @Annotations.EntityDef({Unitc.class, Crawlc.class}) UnitType latum;
+    public static UnitType latum;
     
     public static void load(){
         latum = new UnitType("latum"){{
@@ -26,6 +25,7 @@ public class LUnitTypes{
             segmentScl = 4f;
             segmentPhase = 5f;
             speed = 1f;
+            constructor = CrawlUnit::create;
         }};
     }
 }
