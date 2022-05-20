@@ -10,9 +10,9 @@ import mindustry.mod.*;
 import mindustry.ui.dialogs.*;
 import latum.content.*;
 
-public class ExampleJavaMod extends Mod{
+public class Latum extends Mod{
 
-    public ExampleJavaMod(){
+    public Latum(){
         Log.info("latuming");
     }
 
